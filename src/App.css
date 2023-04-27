@@ -1,38 +1,178 @@
-.App {
+*{
+  margin: 0;
+}
+
+html{
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+
+
+/*login & signup pages*/
+
+.nav-brand {
+  width : 200px;
+  padding : 20px;
+  display: flex;
+}
+
+.login-signup-container{
+  width: 450px;
+  margin: 10px auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.login-signup-form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*sign-up page*/
+
+.profile-pic-container{
+  display: flex;
+}
+
+.profile-pic{
+  border-radius: 50%;
+  width: 25%;
+  margin: 10px auto;
+}
+
+
+.form-row{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-row > input{
+  padding: 10px 0;
+  border-radius: 5px;
+}
+
+/* .form-row > *{ */
+  /* padding: 10px; */
+/* } */
+
+.form-row > label{
+  padding-left: 0;
+}
+
+.login-signup-button{
+  margin: 30px 0 20px;
+}
+
+.register-login-invite{
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-login-link{
+  text-decoration: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 768px){
+  .navbar {
+    display: flex;
+    justify-content: center;
   }
+
+  .nav-brand{
+    width : 300px;
+  }
+
+  .nav-brand:hover{
+    scale: 1.3;
+  }
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+/*Side Navigation bar*/
+a:-webkit-any-link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.sidenav-logo{
+  width: 8rem;
+}
+
+.register-login-link{
+  color: red;
+}
+
+.side-nav{
+  height: 100vh;
+  width: 1fr;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: black;
+  position: fixed;
+  left: 0;
+  text-align: center;
+}
+
+
+.side-nav p{
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.side-nav p:hover{
+  background-color: white;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*pages-navbar*/
+
+.pagesnav-container{
+  display:flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  width: 100vw;
+  height: 7rem;
+  background-color: black;
+  color: white;
+  z-index: -1;
+  align-items: center;
+}
+
+.pagesnav-container p{
+  color: white;
+  display: flex;
+  padding-left: 128px;
+  font-size: 4rem;
+  
+}
+
+.pagesnav-container img{
+  width: 64px;
+  order: 5;
+}
+
+.nav-profile-pic:hover .drop-down-content{
+  display: block;
+}
+
+.drop-down-content{
+  background-color: white;
+  color: black;
+  width: 200px;
+  display: none;
+  position: absolute;
+  right: 200px;
+}
+
+.drop-down-content:hover{
+  background-color: rgb(218, 215, 215);
+  color: black;
 }
